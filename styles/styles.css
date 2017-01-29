@@ -32,6 +32,11 @@ h1
   background-color:#b5e5f5;
 }
 
+.itemList li[ui-sref]:hover
+{
+  background-color:#F4A460;
+}
+
 .searchBtn
 {
   margin-bottom: 20px;

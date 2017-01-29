@@ -1,41 +1,36 @@
-(function () {
-'use strict';
+(function() {
+    'use strict';
 
-angular.module('data')
-.service('MenuDataService'   , MenuDataService)
-.constant('ApiPath', "https://davids-restaurant.herokuapp.com");
+    angular.module('data')
+        .service('MenuDataService', MenuDataService)
+        .constant('ApiPath', "https://davids-restaurant.herokuapp.com");
 
-////////////////////////////////////////////////////////////////
-// SERVICE
-////////////////////////////////////////////////////////////////
-MenuDataService.$inject = ['$http', 'ApiPath'] ;
+    ////////////////////////////////////////////////////////////////
+    // SERVICE
+    ////////////////////////////////////////////////////////////////
+    MenuDataService.$inject = ['$http', 'ApiPath'];
 
-function MenuDataService($http, ApiPath)
-{
-  var service = this ;
+    function MenuDataService($http, ApiPath) {
+        var service = this;
 
-  service.getAllCategories = function ()
-  {
-    var response  = $http (
-      {
-        method : "GET" ,
-        url : (ApiPath+ "/categories.json")
-      });
+        service.getAllCategories = function() {
+            var response = $http({
+                method: "GET",
+                url: (ApiPath + "/categories.json")
+            });
 
-      return response ;
+            return response;
 
-  };
+        };
 
-  service.getItemsForCategory = function (categoryShortName)
-  {
-    var response  = $http (
-      {
-        method : "GET" ,
-        url : (ApiPath + "/menu_items.json?category=" + categoryShortName)
-      });
+        service.getItemsForCategory = function(categoryShortName) {
+            var response = $http({
+                method: "GET",
+                url: (ApiPath + "/menu_items.json?category=" + categoryShortName)
+            });
 
-      return response ;
-  };
-}
+            return response;
+        };
+    }
 
 })();

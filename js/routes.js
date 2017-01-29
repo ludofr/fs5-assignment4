@@ -34,13 +34,13 @@
             })
 
             .state('items', {
-                url: '/items',
+                url: '/items/{categoryShortName}',
                 templateUrl: 'viewStates/items.view.html',
                 controller: 'MenuController as itemsCtrl',
                 resolve: {
-                    promise: ['MenuDataService',
-                        function(MenuDataService) {
-                            return MenuDataService.getItemsForCategory('B');
+                    promise: ['$stateParams', 'MenuDataService',
+                        function($stateParams, MenuDataService) {
+                            return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
                         }
                     ]
                 }

@@ -2,8 +2,9 @@
 
 <div class="col-lg-12">
 
+ <div ng-if="itemsCtrl.categoryContent.length">
     <div class="alert alert-success infoBanner">
-        {{itemsCtrl.categoryContent.length}} {{itemsCtrl.categoryName}}
+        <strong>{{itemsCtrl.categoryContent.length}}</strong> {{itemsCtrl.categoryName}} items
     </div>
 
     <div class="itemList">
@@ -12,5 +13,14 @@
             </items>
         </ul>
     </div>
+  </div>
+
+  <div ng-if="!itemsCtrl.categoryContent.length">
+     <div class="alert alert-danger infoBanner">
+         <strong>No items for this category</strong>
+     </div>
+
+
+   </div>
 
 </div>

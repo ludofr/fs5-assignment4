@@ -1,10 +1,8 @@
 <!doctype html>
 
-<li ng-repeat="item in $ctrl.cat">
-  <a ui-sref="items">
+<li ng-repeat="item in $ctrl.cat"  ui-sref="items({categoryShortName : item.short_name })">
  <div class="listElem">
    <span class="itemName"><b>{{item.short_name}}</b> - {{item.name}} </span>
  </div>
-</a>
 
 </li>
