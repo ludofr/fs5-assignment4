@@ -15,9 +15,14 @@
 
         var promiseData = promise.data;
 
-        if (promiseData.category === undefined) {
+        // If the data returned by the promise has no category field, then it corresponds to the different menu categories
+        if (promiseData.category === undefined)
+        {
             ctrl.categories = promiseData;
-        } else {
+        }
+        else
+        // Otherwise, the data corresponds to the content of a particular category
+        {
             ctrl.categoryContent = promiseData.menu_items;
             ctrl.categoryName = promiseData.category.name;
         }
