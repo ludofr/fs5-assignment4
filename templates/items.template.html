@@ -1,0 +1,11 @@
+<!doctype html>
+
+<li ng-repeat="item in $ctrl.items">
+ <div class="listElem">
+   <span class="itemName"><b>{{item.short_name}}</b> - {{item.name}} </span>
+
+   <div ng-if="item.description === '' "> <br/> </div>
+   <div class="itemDescr"> <i>{{item.description}}</i> </div>
+
+ </div>
+</li>
