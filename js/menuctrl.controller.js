@@ -7,7 +7,6 @@
     angular.module('menuApp')
         .controller('MenuController', MenuController);
 
-
     MenuController.$inject = ['promise'];
 
     function MenuController(promise) {

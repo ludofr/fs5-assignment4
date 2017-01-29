@@ -8,10 +8,10 @@
             <span class="glyphicon glyphicon-minus"></span> {{item.price_large | currency }} <i>(large)</i>
         </div>
         <div ng-if="item.price_small !== null && item.price_large === null " class="itemPrice">
-            {{item.price_small | currency }} <i>(small)</i>
+            {{item.price_small | currency }}
         </div>
         <div ng-if="item.price_small === null && item.price_large !== null " class="itemPrice">
-            {{item.price_large | currency }} <i>(large)</i>
+            {{item.price_large | currency }}
         </div>
 
 
