@@ -14,13 +14,14 @@ function CategoriesController(MenuDataService)
   var ctrl = this ;
 
   ctrl.categories      = [] ;
-  ctrl.itemsInCategory = [] ;
+  ctrl.itemsInCategory = [ {name : "toto"  } , {name : "titi"  } ] ;
 
   var promise = MenuDataService.getAllCategories();
 
   promise.then(function (response)
   {
     ctrl.categories = response.data ;
+    //ctrl.itemsInCategory = response.data ;
   })
   .catch(function (error)
   {

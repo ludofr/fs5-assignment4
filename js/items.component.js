@@ -11,7 +11,7 @@ angular.module('menuApp')
     templateUrl : "templates/items.template.html",
     bindings    :
     {
-      items : '<'   // one-way binding
+      menuItems : '<'   // one-way binding
     }
 
 });
