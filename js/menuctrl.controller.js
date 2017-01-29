@@ -15,6 +15,9 @@
 
         var promiseData = promise.data;
 
+        ctrl.goBackText     = 'Go back to the different categories';
+        ctrl.emptyCategory  = 'No items for this category';
+
         ctrl.categories = [];
         ctrl.categoryContent = [];
         ctrl.categoryName = [];

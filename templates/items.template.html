@@ -1,11 +1,23 @@
 <!doctype html>
 
 <li ng-repeat="item in $ctrl.menuItems">
- <div class="listElem">
-   <span class="itemName"><b>{{item.short_name}}</b> - {{item.name}} </span>
+    <div class="listElem">
 
-   <div ng-if="item.description === '' "> <br/> </div>
-   <div class="itemDescr"> <i>{{item.description}}</i> </div>
+        <div ng-if="item.price_small !== null && item.price_large !== null " class="itemPrice">
+            {{item.price_small | currency }} <i>(small)</i>
+            <span class="glyphicon glyphicon-minus"></span> {{item.price_large | currency }} <i>(large)</i>
+        </div>
+        <div ng-if="item.price_small !== null && item.price_large === null " class="itemPrice">
+            {{item.price_small | currency }} <i>(small)</i>
+        </div>
+        <div ng-if="item.price_small === null && item.price_large !== null " class="itemPrice">
+            {{item.price_large | currency }} <i>(large)</i>
+        </div>
 
- </div>
+
+        <!-- <div class="itemPrice">{{item.price_small | currency }} - {{item.price_large | currency }}</div> -->
+        <span class="itemName"><b>{{item.short_name}}</b> - {{item.name}} </span>
+        <div ng-if="item.description === '' "> <br/> </div>
+        <div class="itemDescr"> <i>{{item.description}}</i> </div>
+    </div>
 </li>

@@ -1,8 +1,8 @@
 <!doctype html>
 
-<li ng-repeat="item in $ctrl.cat"  ui-sref="items({categoryShortName : item.short_name })">
- <div class="listElem">
-   <span class="itemName"><b>{{item.short_name}}</b> - {{item.name}} </span>
- </div>
-
+<li ng-repeat="item in $ctrl.cat" ui-sref="items({categoryShortName : item.short_name })">
+    <div class="listElem">
+        <span><strong>{{item.short_name}}</strong></span>
+        <span class="categoryName"> {{item.name}} </span>
+    </div>
 </li>

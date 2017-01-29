@@ -5,16 +5,16 @@ h1
   text-align: center;
 }
 
-.trashButton
-{
-  margin-right: 5px;
-  float : right ;
-}
-
 .listElem
 {
   padding: 5px;
   position: relative;
+}
+
+.categoryName
+{
+  margin-right: 5px;
+  float : right ;
 }
 
 .itemList li
@@ -35,11 +35,20 @@ h1
 .itemList li[ui-sref]:hover
 {
   background-color:#F4A460;
+  cursor: pointer ;
+  color:white ;
 }
 
-.searchBtn
+.categoriesBtn
 {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.itemPrice
+{
+  float : right ;
+  font-weight: bold;
 }
 
 .infoBanner
